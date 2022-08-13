@@ -569,7 +569,7 @@ async function set_sbv2(blob) {
 	dispose_old = ()=>{if(stop_playing) stop_playing();};
 	
 	let num_midis = sbv2.tracks.length;
-	for(let i = (num_midis <= 1 ? 0 : 1); i < num_midis; i++) { // Yes, I'm skipping track zero. Track zero doesn't have anything useful. At least not for this thing.
+	for(let i = 0; i < num_midis; i++) { // Yes, I'm skipping track zero. Track zero doesn't have anything useful. At least not for this thing.
 		let track = sbv2.tracks[i];
 		
 		let tempo = track.tempo;
